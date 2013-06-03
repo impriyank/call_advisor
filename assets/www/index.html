@@ -3,8 +3,29 @@
     <head>
     <title>PhoneGap</title>
     <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
-    </head>
-    <body>
-    <h1>Hello Phonegap World</h1>
+    <script type="text/javascript" charset="utf-8" src="calllog.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    function onDeviceReady() {
+    	window.plugins.CallLog.list('all', onSuccess, onError);
+    }   
+  
+    function onSuccess(contact) {
+    	alert("log read Success");
+  	};
+  
+  	function onError(contactError) {
+      alert("log read Error = " + contactError.code);
+  	};
+
+    </script>
+   </head>
+    <body onLoad="onDeviceReady()">
+   <h1>Show Call Logs</h1>
     </body>
     </html>

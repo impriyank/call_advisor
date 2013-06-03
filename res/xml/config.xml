@@ -32,7 +32,7 @@
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />
 
-    <log level="DEBUG"/>
+    <log level="ERROR"/>
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
 <plugins>
@@ -55,6 +55,7 @@
     <plugin name="Echo" value="org.apache.cordova.Echo" />
     <plugin name="Globalization" value="org.apache.cordova.Globalization"/>
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser"/>
+    <plugin name="CallLog" value="org.apache.cordova.CallListPlugin"/>
 </plugins>
 </cordova>
 
